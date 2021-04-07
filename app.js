@@ -10,7 +10,7 @@ const uuid = require("uuid");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://keshav_23:keshav@cluster0.iflqo.mongodb.net/examDB?retryWrites=true&w=majority";
+  "url here.....";
 
 const app = express();
 
