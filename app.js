@@ -10,7 +10,7 @@ const uuid = require("uuid");
 const User = require("./models/user");
 
 const MONGODB_URI =
-  "mongodb+srv://keshav_23:keshav%4023@cluster0.iflqo.mongodb.net/examDB?retryWrites=true&w=majority";
+  "mongodb+srv://keshav_23:keshav@cluster0.iflqo.mongodb.net/examDB?retryWrites=true&w=majority";
 
 const app = express();
 
@@ -19,7 +19,7 @@ const store = new MongoDBStore({
   collection: "sessions",
 });
 
-const fileStorage = multer.diskStorage({
+const fileStorage = multer.diskStorage({ 
   destination: (req, file, cb) => {
     console.log(file.fieldname);
     if (file.fieldname == "question") {
