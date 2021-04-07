@@ -1,0 +1,50 @@
+a:hover {
+  cursor: pointer;
+}
+
+.class-joined {
+  margin: 1%;
+}
+
+.dashboard-control {
+  margin: 1%;
+}
+
+.signup-form,
+.login-control {
+  margin: 7% 25% 5%;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 5% 3%;
+}
+.form-control {
+  border-radius: 10px;
+}
+
+.room-card {
+  margin: 0 25%;
+}
+
+.join-class {
+  text-align: center;
+  margin: 0 25%;
+}
+.card {
+  margin-bottom: 5px;
+}
+.margin-center {
+  text-align: center;
+}
+.list-control {
+  padding: 2% 30%;
+}
+.center-align {
+  text-align: center;
+}
+.card-center-align {
+  text-align: center;
+  margin: 2% 25%;
+}
+.hr-style {
+  margin: 2% 20%;
+}

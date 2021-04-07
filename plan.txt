@@ -1,0 +1,21 @@
+'/' - Student Login
+'/dashboard' - logged in student dashboard
+'/joinedRooms' - logged in student joinedRooms
+'/joinedRooms/:roomID' - particular room (show participants show qp uploaded)
+'/joinedRooms/:roomID/:qpaperID/submit' - submit responses
+
+'/admin/login' - Teacher Login
+'/admin/dashboard' - Teacher dashboard (show rooms)
+'/admin/createRoom' - Teacher room creation
+'/admin/:roomID' - show participants and create assignment
+'/admin/:roomID/:qpaperID/responses' - response for a particular q paper
+
+Database Management:-
+    Users: id,email,name,password,role,(roomsJoined,responses,roomsCreated)
+    Rooms: id,createdUserID,participants,qpapers
+    QPaper: id,belongsToRoom,createdUserId
+    Responses: id,belongsToRoom,createdUserId,submittedID,qpaperID,timestamps
+
+Files:
+    QuestionsPaper,
+    AnswerPaper,        

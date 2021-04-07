@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <h2>Dashboard</h2>
+        <form action="/admin/logout" method="post" class="d-flex">
+          <button type="submit" class="btn btn-md btn-outline-danger">
+            Logout
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div class="dashboard-control">
+      <div class="card card-center-align">
+        <div class="card-body">
+          <h4>Rooms Created</h4>
+        </div>
+      </div>
+      <% if (rooms.length > 0) { %> <% rooms.forEach(room => { %>
+      <div class="card text-center room-card">
+        <div class="card-body">
+          <h4 class="card-title"><%= room.roomName %></h4>
+          <h6 class="card-text">Room ID: <%= room._id %></h6>
+          <a href="/admin/rooms/<%= room._id %>" class="btn btn-primary"
+            >Go To Classroom</a
+          >
+        </div>
+      </div>
+      <% }) %> <% }else{ %>
+      <h6>Nothing to show....Create a new room.</h6>
+      <% } %>
+
+      <hr />
+      <div class="center-align">
+        <form action="/admin/createRoom" method="get">
+          <span>Create your Classroom Now!!!! ---></span>
+          <button type="submit" class="btn btn-outline-success">
+            Create A New Room
+          </button>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
